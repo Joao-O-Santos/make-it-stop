@@ -46,9 +46,11 @@ pages:
 To work locally with this project, you'll have to follow the steps below:
 
 1. Fork, clone or download this project
-2. Install `GNU Make` and a markdown renderer.
+2. Install [GNU Make](https://www.gnu.org/software/make/) and a markdown
+   renderer (e.g.,
+   [discount](https://www.pell.portland.or.us/~orc/Code/discount/))
 3. Generate the website: `make`
-4. Preview your project: use your browser to open `public/index.html'
+4. Preview your project: use your browser to open `public/index.html`
 
 ## GitLab User or Group Pages
 
