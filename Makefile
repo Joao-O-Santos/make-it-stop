@@ -7,7 +7,7 @@ MD = $(shell ls pages)
 
 .PHONY: $(MD)
 
-all: clean $(MD)
+all: clean mk_public $(MD) 
 	cp -f templates/styles.css public/styles.css
 
 $(MD): %.md:
@@ -21,4 +21,7 @@ $(MD): %.md:
 
 clean:
 	@echo "Cleaning all auto-generated files"
-	-rm public/*
+	-rm -r public
+	
+mk_public:
+	mkdir public
