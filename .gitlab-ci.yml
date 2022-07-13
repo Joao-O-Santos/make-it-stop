@@ -1,0 +1,11 @@
+image: alpine
+
+pages:
+    stage: deploy
+    script:
+        - apk update
+        - apk add make markdown
+        - make
+    artifacts:
+        paths:
+            - public
