@@ -22,6 +22,14 @@ documentation https://docs.gitlab.com/ce/user/project/pages/.
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## Description
+
+This project aims at developing infrastructure for generating simple
+pages (and one day blogs as well) from plain markdown files, coupled with
+some basic `html` and `css`, effectively using `GNU Make` as the static
+website generator.
+
+
 ## GitLab CI
 
 This project's static Pages are built by [GitLab CI][ci], following the steps
@@ -49,8 +57,9 @@ To work locally with this project, you'll have to follow the steps below:
 2. Install [GNU Make](https://www.gnu.org/software/make/) and a markdown
    renderer (e.g.,
    [discount](https://www.pell.portland.or.us/~orc/Code/discount/))
-3. Generate the website: `make`
-4. Preview your project: use your browser to open `public/index.html`
+3. Write each page in markdown in `pages/` (e.g., `pages/example.md`).
+4. Generate the website: `make`
+5. Preview your project: use your browser to open `public/index.html`
 
 ## GitLab User or Group Pages
 
