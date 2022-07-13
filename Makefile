@@ -1,14 +1,13 @@
 # Adapt: https://www.gnu.org/software/make/manual/html_node/Static-Usage.html#Static-Usage
 
 MD = $(wildcard *.md)
-MD := $(filter-out README.md, $(MD))
+# You can add other markdown files you don't wish to render below
+# MD := $(filter-out README.md TODO.md <file1.md> <fileX.md>, $(MD))
+MD := $(filter-out README.md TODO.md, $(MD))
 
 .PHONY: $(MD)
 
 all: $(MD)
-	# Uncomment if you wish to remove any files
-	#@echo "Remove sections that are not ready (yet) for publication"
-	#-rm <file name/s>
 
 $(MD): %.md:
 	@echo "Creating the $* page"

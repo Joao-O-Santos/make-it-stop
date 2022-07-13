@@ -1,1 +1,88 @@
-/* You can add a custom css stylesheet to your website */
+/* Template stylesheet change whatever you want */
+body {
+	font-weight: normal;
+	font-size: 14pt;
+	line-height: 1.5;
+	text-align: left;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 72ch;
+	max-width: 80%;
+}
+
+h1, h2, h3, h4 {
+	color: blue;
+	font-weight: bold;
+}
+
+h1 {
+	line-height: 3;
+	font-size: 25pt;
+	text-align: center;
+}
+
+h2 {
+	font-size: 22pt;
+}
+
+h3 {
+	font-size: 18pt;
+}
+
+h4 {
+	font-size: 16pt;
+}
+
+code {
+	font-family: monospace;
+	font-size: 12pt;
+	font-weight: normal;
+	background-color: #E5E4E2;
+}
+
+a {
+	text-decoration: none;
+}
+
+.menu {
+	/* width and margins are relative to body (see top of file) */
+	width: 110%; 
+	margin-left: -5%;
+	position: sticky;
+	text-align: center;
+	top: 0;
+	background-color: blue;
+}
+
+.selected {
+	background-color: white;
+	position: center;
+}
+
+.menu ul {
+	list-style: none;
+}
+.menu li, .selected li {
+	padding: 0pt 10pt 0pt 10pt;
+	display: inline-block;
+}
+
+.menu li:hover, .selected li:hover {
+	background-color: #bebebe;
+}
+
+.menu a, .selected a {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16pt;
+}
+
+.menu a {
+	color: white;
+}
+
+.selected a {
+	color: black;
+}
