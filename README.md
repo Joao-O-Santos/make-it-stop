@@ -1,4 +1,4 @@
-![Build Status](https://gitlab.com/joao-o-santos/markdown-html/badges/main/build.svg)
+![Build Status](https://gitlab.com/joao-o-santos/markdown-html/badges/main/pipeline.svg)
 
 ---
 
