@@ -7,7 +7,9 @@ MD = $(shell ls pages)
 
 .PHONY: $(MD)
 
-all: clean mk_public $(MD) 
+all: it_stop
+
+it_stop: clean mk_public $(MD) 
 	cp -f templates/styles.css public/styles.css
 
 $(MD): %.md:

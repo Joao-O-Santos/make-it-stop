@@ -1,11 +1,11 @@
-# Make it Stop
+# make it\_stop
 
 Have you ever looked at the complexity of modern websites and though
 someone should make it stop? When you come across a needlessly
 complicated "web app" do you wish you could make it stop and become
 a static website? Have you turned to static website generators only to
 find them reliant on too many dependencies and a scripting language you
-don't have installed on your minimalist machine? Then, `make-it-stop`
+don't have installed on your minimalist machine? Then, `make it_stop`
 could be for you!
 
 **Disclaimer: the former is meant to be a tongue-in-cheek play on words
@@ -27,7 +27,7 @@ history](https://www.youtube.com/watch?v=njos57IJf-0).
 
 ## Tutorial
 
-1. To use `make-it-stop` write your pages' text in pure markdown and save
+1. To use `make it_stop` write your pages' text in pure markdown and save
    them in `pages/`.
 
 2. Write whatever pure `HTML` code you need to appear before each pages'
@@ -35,7 +35,8 @@ history](https://www.youtube.com/watch?v=njos57IJf-0).
    the text in `templates/footer.html`. Style your webpage by tweaking
    the `templates/styles.css` file. 
 
-3. Run `make` to build your website.
+3. Run `make it_stop` to build your website (just running `make` works
+   as well but where's the fun in that...).
 
 4. If you wish to host it as a GitLab Pages go to your GitLab repo and
    ensure you have the GitLab Pages feature enabled.
@@ -50,8 +51,8 @@ history](https://www.youtube.com/watch?v=njos57IJf-0).
 
 ## Example Website
 
-You can see an example of how a website made with `make-it-stop` can be
-made to look by checking out the GitLab Pages' page `make-it-stop` made
+You can see an example of how a website made with `make it_stop` can be
+made to look by checking out the GitLab Pages' page `make it_stop` made
 from the files on this repo by going to:
 [joao-o-santos.gitlab.io/make-it-stop](joao-o-santos.gitlab.io/make-it-stop)
 
