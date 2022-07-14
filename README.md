@@ -5,7 +5,7 @@ someone should make it stop? When you come across a needlessly
 complicated "web app" do you wish you could make it stop and become
 a static website? Have you turned to static website generators only to
 find them reliant on too many dependencies and a scripting language you
-don't have you installed on you minimalist machine? Then `make-it-stop`
+don't have installed on your minimalist machine? Then, `make-it-stop`
 could be for you!
 
 **Disclaimer: the former is meant to be a tongue-in-cheek play on words
