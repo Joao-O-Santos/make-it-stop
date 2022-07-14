@@ -8,10 +8,9 @@ find them reliant on too many dependencies and a scripting language you
 don't have you installed on you minimalist machine? Then `make-it-stop`
 could be for you!
 
-**Disclaimer: the former is meant to be as a tongue-in-cheek play on
-words I don't wish to aggravate hardworking web developer or
-developers of static website generators (they are all better than this
-one).**
+**Disclaimer: the former is meant to be a tongue-in-cheek play on words
+I don't wish to aggravate hardworking web developer or developers of
+static website generators (they are all better than this one).**
 
 
 ## Description
@@ -47,6 +46,14 @@ history](https://www.youtube.com/watch?v=njos57IJf-0).
    GitLab repo.** *Note: you can work on pages and files you don't want
    to make public by putting them in `wip/`, which is `.gitignore`d by
    default, just take caution not to `git add -f` those files.*
+
+
+## Example Website
+
+You can see an example of how a website made with `make-it-stop` can be
+made to look by checking out the GitLab Pages' page `make-it-stop` made
+from the files on this repo by going to:
+[joao-o-santos.gitlab.io/make-it-stop](joao-o-santos.gitlab.io/make-it-stop)
 
 
 ## GitLab Pages
