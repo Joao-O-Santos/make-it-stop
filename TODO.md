@@ -10,4 +10,4 @@
 	+ [ ] Automatically add posts (title+description) to the main
 	  page.
 	+ [ ] Sort blog entries chronologically (e.g., by processing
-	  a <!-- PUB_DATE: year-month-date --> comment.
+	  a <!-- PUB_DATE: year-month-date --> comment).
