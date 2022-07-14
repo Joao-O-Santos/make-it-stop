@@ -29,6 +29,28 @@ pages (and one day blogs as well) from plain markdown files, coupled with
 some basic `html` and `css`, effectively using `GNU Make` as the static
 website generator.
 
+## Tutorial
+
+1. To use `make-it-stop` write your pages' text in pure markdown and save
+   them in `pages/`.
+
+2. Write whatever pure `HTML` code you need to appear before each pages'
+   text in `templates/header.html` and the `HTML` code to appear below
+   the text in `templates/footer.html`. Style your webpage by tweaking
+   the `templates/styles.css` file. 
+
+3. Run `make` to build your website.
+
+4. If you wish to host it as a GitLab Pages go to your GitLab repo and
+   ensure you have the GitLab Pages feature enabled.
+
+5. In case you want your website to be publicly accessible set your
+   project's visibility to public. **WARNING: this will make all the
+   files you committed to your `git` repo available online through the
+   GitLab repo.** *Note: you can work on pages and files you don't want
+   to make public by putting them in `wip/`, which is `.gitignore`d by
+   default, just take caution not to `git add -f` those files.
+
 
 ## GitLab CI
 
@@ -55,11 +77,10 @@ To work locally with this project, you'll have to follow the steps below:
 
 1. Fork, clone or download this project
 2. Install [GNU Make](https://www.gnu.org/software/make/) and a markdown
-   renderer (e.g.,
-   [discount](https://www.pell.portland.or.us/~orc/Code/discount/))
-3. Write each page in markdown in `pages/` (e.g., `pages/example.md`).
-4. Generate the website: `make`
-5. Preview your project: use your browser to open `public/index.html`
+   parser (e.g., [discount](https://www.pell.portland.or.us/~orc/Code/discount/))
+   or read
+3. Generate the website: `make`
+4. Preview your project: use your browser to open `public/index.html`
 
 ## GitLab User or Group Pages
 

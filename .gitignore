@@ -1,2 +1,4 @@
 # Pages are automatically generated no need to track them
-public/*
+public/
+# Pages/files in WIP are not rendered nor added to the `git` repo.
+wip/
