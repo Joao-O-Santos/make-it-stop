@@ -54,7 +54,7 @@ history](https://www.youtube.com/watch?v=njos57IJf-0).
 You can see an example of how a website made with `make it_stop` can be
 made to look by checking out the GitLab Pages' page `make it_stop` made
 from the files on this repo by going to:
-[joao-o-santos.gitlab.io/make-it-stop](joao-o-santos.gitlab.io/make-it-stop)
+[https://joao-o-santos.gitlab.io/make-it-stop](https://joao-o-santos.gitlab.io/make-it-stop)
 
 
 ## GitLab Pages
