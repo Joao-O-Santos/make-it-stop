@@ -1,4 +1,4 @@
-<!-- MENU_ENTRY=Home -->
+<!-- 0 MENU_ENTRY=Home -->
 # Home Page
 
 Some text.

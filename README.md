@@ -32,7 +32,9 @@ history](https://www.youtube.com/watch?v=njos57IJf-0).*
 2. To use `make it_stop` write your websites pages' in `PAGES_DIR`
    (which is `pages/` by default; see `config.mk`). **To include a link
    to a page in the top menu bar add a comment formatted as
-   `<!-- MENU_ENTRY=LINK TEXT HERE -->` somewhere in the page.**
+   `<!-- X MENU_ENTRY=LINK TEXT HERE -->` somewhere in the page, where
+   is the entry's position in the menu, if X is missing all entries are
+   sorted by `LINK TEXT`.**
 
 3. Write whatever `HTML` and `CSS` code you may need in `TEMPLATES_DIR`
    (which is `templates/` by default, see `config.mk`)

@@ -1,2 +1,2 @@
-<!-- MENU_ENTRY=Another Page -->
+<!-- 1 MENU_ENTRY=Another Page -->
 # Another page
