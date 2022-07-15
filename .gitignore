@@ -2,3 +2,4 @@
 public/
 # Pages/files in WIP are not rendered nor added to the `git` repo.
 wip/
+templates/menu.html

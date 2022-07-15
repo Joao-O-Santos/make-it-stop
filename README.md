@@ -27,21 +27,29 @@ history](https://www.youtube.com/watch?v=njos57IJf-0).*
 
 ## Tutorial
 
-1. To use `make it_stop` write your pages' text in pure markdown and
-   save them in `pages/`.
+1. See if you want to change any of the defaults in `config.mk`.
 
-2. Write whatever pure `HTML` code you need to appear before each pages'
-   text in `templates/header.html` and the `HTML` code to appear below
-   the text in `templates/footer.html`. Style your webpage by tweaking
-   the `templates/styles.css` file. 
+2. To use `make it_stop` write your websites pages' in `PAGES_DIR`
+   (which is `pages/` by default; see `config.mk`). **To include a link
+   to a page in the top menu bar add a comment formatted as
+   `<!-- MENU_ENTRY=LINK TEXT HERE -->` somewhere in the page.**
 
-3. Run `make it_stop` to build your website (just running `make` works
+3. Write whatever `HTML` and `CSS` code you may need in `TEMPLATES_DIR`
+   (which is `templates/` by default, see `config.mk`)
+	- `HTML` to appear **BEFORE** each pages' menu goes in
+	  `TEMPLATES_DIR/header.html`.
+	- `HTML` to appear **AFTER** each pages' menu but **BEFORE** the
+	  main text in `TEMPLATES_DIR/after_menu.html`.
+	- `HTML` to after the main text goes in `TEMPLATES_DIR/footer.html`.
+	- Style your webpage by writing your styles in `TEMPLATES_DIR/styles.css`.
+
+4. Run `make it_stop` to build your website (just running `make` works
    as well but where's the fun in that...).
 
-4. If you wish to host it as a GitLab Pages go to your GitLab repo and
+5. If you wish to host it as a GitLab Pages go to your GitLab repo and
    ensure you have the GitLab Pages feature enabled.
 
-5. In case you want your website to be publicly accessible set your
+6. In case you want your website to be publicly accessible set your
    project's visibility to public. **WARNING: this will make all the
    files you committed to your `git` repo available online through the
    GitLab repo.** *Note: you can work on pages and files you don't want

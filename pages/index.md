@@ -1,4 +1,4 @@
-<!-- Add valid markdown below -->
+<!-- MENU_ENTRY=Home -->
 # Home Page
 
 Some text.
