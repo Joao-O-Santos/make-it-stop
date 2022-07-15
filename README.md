@@ -1,6 +1,6 @@
 # make it\_stop
 
-Have you ever looked at the complexity of modern websites and though
+Have you ever looked at the complexity of modern websites and thought
 someone should make it stop? When you come across a needlessly
 complicated "web app" do you wish you could make it stop and become
 a static website? Have you turned to static website generators only to
@@ -8,8 +8,8 @@ find them reliant on too many dependencies and a scripting language you
 don't have installed on your minimalist machine? Then, `make it_stop`
 could be for you!
 
-**Disclaimer: the former is meant to be a tongue-in-cheek play on words
-I don't wish to aggravate hardworking web developer or developers of
+**Disclaimer: the former is meant to be a tongue-in-cheek play on words,
+I don't wish to aggravate hardworking web developer nor developers of
 static website generators (they are all better than this one).**
 
 
@@ -22,13 +22,13 @@ Make it stop is my sorry attempt at making `(GNU) Make` make static
 websites from simple markdown files, coupled with raw `html` and `css`.
 
 *Note: The GNU/knew pun is taken from this [epic rap battle from
-history](https://www.youtube.com/watch?v=njos57IJf-0).
+history](https://www.youtube.com/watch?v=njos57IJf-0).*
 
 
 ## Tutorial
 
-1. To use `make it_stop` write your pages' text in pure markdown and save
-   them in `pages/`.
+1. To use `make it_stop` write your pages' text in pure markdown and
+   save them in `pages/`.
 
 2. Write whatever pure `HTML` code you need to appear before each pages'
    text in `templates/header.html` and the `HTML` code to appear below
