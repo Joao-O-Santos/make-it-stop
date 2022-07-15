@@ -1,29 +1,24 @@
-# Adapt: https://www.gnu.org/software/make/manual/html_node/Static-Usage.html#Static-Usage
+include config.mk
 
-MD = $(shell ls pages)
-
-# You can exclude markdown files you don't wish to render below
-# MD := $(filter-out <fileX.md> <fileY.md>, $(MD))
-
-.PHONY: $(MD)
+.PHONY: $(PAGES)
 
 all: it_stop
 
-it_stop: clean mk_public $(MD) 
-	cp -f templates/styles.css public/styles.css
+it_stop: clean
+	mkdir $(WEB_DIR)
+	cp -f $(TEMPLATES_DIR)/styles.css $(WEB_DIR)/styles.css
+	make $(PAGES)
 
-$(MD): %.md:
+# See: https://www.gnu.org/software/make/manual/html_node/Static-Usage.html#Static-Usage
+$(PAGES): %.md:
 	@echo "Creating the $* page"
-	cat templates/header.html > public/$*.html
-	markdown pages/$*.md >> public/$*.html
-	cat templates/footer.html >> public/$*.html
+	cat $(TEMPLATES_DIR)/header.html > $(WEB_DIR)/$*.html
+	$(MP) $(MFLAGS) $(PAGES_DIR)/$*.md >> $(WEB_DIR)/$*.html
+	cat $(TEMPLATES_DIR)/footer.html >> $(WEB_DIR)/$*.html
 	@echo "Marking the current page as selected in its menu/nav bar"
-	sed -Ei 's/li(><a href="$*.html")/li class="selected"\1/g' public/$*.html
+	sed -Ei 's/li(><a href="$*.html")/li class="selected"\1/g' $(WEB_DIR)/$*.html
 	@printf "\n"
 
 clean:
 	@echo "Cleaning all auto-generated files"
-	-rm -r public
-	
-mk_public:
-	mkdir public
+	-rm -r $(WEB_DIR)
