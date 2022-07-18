@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: LGPL-2.1-or-later
+# Copyright (c) 2022, João Oliveira Santos
+
 include config.mk
 
 .PHONY: $(PAGES)

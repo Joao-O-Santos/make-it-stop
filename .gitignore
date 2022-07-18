@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: CC0-1.0
 # Pages are automatically generated no need to track them
 public/
 # Pages/files in WIP are not rendered nor added to the `git` repo.

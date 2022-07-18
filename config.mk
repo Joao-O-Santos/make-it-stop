@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: CC0-1.0
 PAGES_DIR = pages
 PAGES = $(shell ls $(PAGES_DIR))
 WEB_DIR = public
