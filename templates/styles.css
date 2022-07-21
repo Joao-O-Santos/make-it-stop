@@ -10,8 +10,8 @@ body {
 	margin-bottom: 5%;
 	margin-left: auto;
 	margin-right: auto;
-	width: 72ch;
-	max-width: 80%;
+	width: 80%;
+	max-width: 100ch;
 }
 
 h1, h2, h3, h4 {
@@ -37,6 +37,18 @@ h4 {
 	font-size: 16pt;
 }
 
+a {
+	text-decoration: none;
+}
+
+blockquote::before {
+	content: open-quote;
+}
+
+blockquote::after {
+	content: close-quote;
+}
+
 code {
 	font-family: monospace;
 	font-size: 12pt;
@@ -44,8 +56,15 @@ code {
 	background-color: #E5E4E2;
 }
 
-a {
-	text-decoration: none;
+.code-block {
+	font-family: monospace;
+	font-size: 12pt;
+	font-weight: normal;
+	background-color: #E5E4E2;
+}
+
+footer {
+	font-size: 12pt;
 }
 
 .menu {
