@@ -18,6 +18,7 @@ it_stop: clean menu
 	@make --no-print-directory $(PAGES)
 	@printf "Done!\nAll pages are rendered and ready!\n"
 
+# Refactor for simplicity (e.g., $(WEB_DIR)/%.html: $(PAGES_DIR):%.md: )
 # See: https://www.gnu.org/software/make/manual/html_node/Static-Usage.html#Static-Usage
 $(PAGES): %.md:
 	@echo "Rendering the $*.md file"
