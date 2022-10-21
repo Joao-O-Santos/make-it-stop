@@ -5,12 +5,12 @@ body {
 	font-weight: normal;
 	font-size: 14pt;
 	line-height: 1.5;
-	text-align: left;
+	text-align: "left";
 	margin-top: 5%;
 	margin-bottom: 5%;
 	margin-left: auto;
 	margin-right: auto;
-	width: 80%;
+	width: 72ch;
 	max-width: 100ch;
 }
 
@@ -92,6 +92,8 @@ footer {
 
 .menu li:hover, .selected li:hover {
 	background-color: #bebebe;
+	/* increase padding on hover making select "pop" */
+	padding: 0pt 28pt 0pt 28pt;
 }
 
 .menu a, .selected a {
@@ -106,4 +108,12 @@ footer {
 
 .selected a {
 	color: black;
+}
+
+.menu a:hover, .selected a:hover {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16pt;
+	padding: 0pt 28pt 0pt 28pt;
+	margin: 0pt -28pt 0pt -28pt;
 }
