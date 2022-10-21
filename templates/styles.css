@@ -94,11 +94,12 @@ footer {
 }
 
 .menu a, .selected a {
-	text-decoration: none;
+	dispaly: block;
 	/* make hitbox overlap with the one from `.menu li`
 	  see: https://stackoverflow.com/a/34226580 */
 	padding: 0pt 14pt 0pt 14pt;
 	margin: 0pt -14pt 0pt -14pt;
+	text-decoration: none;
 	font-weight: bold;
 	font-size: 16pt;
 }
