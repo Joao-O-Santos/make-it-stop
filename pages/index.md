@@ -17,7 +17,7 @@ static website generators (they are all better than this one).**
 ## Description
 
 <blockquote>
-How many websites could `(GNU) Make` make if `(GNU) Make` knew how to
+How many websites could `(GNU) Make` make if `(GNU) Make` GNU how to
 make websites?
 </blockquote>
 
@@ -34,7 +34,7 @@ history](https://www.youtube.com/watch?v=njos57IJf-0).*
 
 2. Customize the files in `TEMPLATES_DIR`
 
-3. If necessary make change the defaults in `config.mk`
+3. If necessary change the defaults in `config.mk`
 
 4. Run `make it_stop`
 

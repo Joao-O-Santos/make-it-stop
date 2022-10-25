@@ -16,7 +16,7 @@ defaults.
 To use `make it_stop` write your websites pages' in `PAGES_DIR`
 (which is `pages/` by default; see `config.mk`). **To include a link to
 a page in the top menu bar add a comment formatted as `<!--` `X
-MENU_ENTRY=LINK TEXT HERE` `-->` somewhere in the page, where is the
+MENU_ENTRY=LINK TEXT HERE` `-->` somewhere in the page, where X is the
 entry's position in the menu, if X is missing all entries are sorted by
 `LINK TEXT HERE`.**
 
@@ -32,7 +32,8 @@ Write whatever `HTML` and `CSS` code you may need in `TEMPLATES_DIR`
 - `HTML` to appear **AFTER** each pages' menu but **BEFORE** the main
   text in `TEMPLATES_DIR/after_menu.html`.
 
-- `HTML` to after the main text goes in `TEMPLATES_DIR/footer.html`.
+- `HTML` to appear after the main text goes in
+  `TEMPLATES_DIR/footer.html`.
 
 - Style your webpage by writing your styles in
   `TEMPLATES_DIR/styles.css`.
@@ -80,12 +81,13 @@ Netlify).
 
 ### GitLab Pages
 
-If you wish to host it as a GitLab Pages go to your GitLab repo and
-ensure you have the GitLab Pages feature enabled.
+If you wish to host your website as a GitLab Pages' page go to your
+GitLab repo and ensure you have the GitLab Pages feature enabled. GitLab
+will then use the `.gitlab-ci.yml` included in the `make it_stop`
+[repo](https://gitlab.com/joao-o-santos/make-it-stop) to generate your
+website. 
 
-If you wish to host your static websites using the GitLab Pages service
-you can do so by using the simple `.gitlab-ci.yml` included in the
-`make it_stop` [repo](https://gitlab.com/joao-o-santos/make-it-stop).
+Below is the code in the `.gitlab-ci.yml`.
 
 <pre class="code-block">
 image: alpine
@@ -104,6 +106,8 @@ pages:
 In case you want your website to be publicly accessible set your
 GitLab project's visibility to public. **WARNING: this will make all the
 files you committed to your `git` repo available online through the
-GitLab repo.** *Note: you can work on pages and files you don't want to
-make public by putting them in `wip/`, which is `.gitignore`d by
-default, just take caution not to `git add -f` those files.*
+GitLab repo. Moreover, the `.gitlab-ci.yml` instructs GitLab CI/CD to
+render and deploy all the pages in `PAGES_DIR` to your website.** *Note:
+you can work on pages and files you don't want to make public by putting
+them in `wip/`, which is `.gitignore`d by default, just take caution not
+to `git add -f` those files.*
