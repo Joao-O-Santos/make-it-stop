@@ -1,4 +1,5 @@
 <!-- 1 MENU_ENTRY=Tutorial -->
+<!-- SPDX-License-Identifier: CC0-1.0 -->
 # Tutorial
 
 Here you can find an introductory tutorial on how to use `make it_stop`

@@ -15,14 +15,17 @@ static website generators (they are all better than this one).**
 
 ## Description
 
-> How many websites could `(GNU) Make` make if `(GNU) Make` knew how to
-> make websites?
+> How many websites could `Make` make if `Make` GNU how to make
+> websites?
 
-Make it stop is my sorry attempt at making `(GNU) Make` make static
-websites from simple markdown files, coupled with raw `html` and `css`.
+Make it stop is my sorry attempt at making `Make` make static websites
+from simple markdown files, coupled with raw `html` and `css`.
 
-*Note: The GNU/knew pun is taken from this [epic rap battle from
-history](https://www.youtube.com/watch?v=njos57IJf-0).*
+*Notes:*
+1. *The GNU/knew pun is taken from this [epic rap battle from
+   history](https://www.youtube.com/watch?v=njos57IJf-0).*
+2. *`make it\_stop` is intended to be compatible with different versions
+   of `Make`, not only with `(GNU) Make`.*
 
 
 ## Example Website
@@ -51,4 +54,3 @@ itself made with `make it_stop`.
 
 **For more detailed instructions checkout the
 [tutorial](https://joao-o-santos.gitlab.io/make-it-stop/tutorial.html).**
-
