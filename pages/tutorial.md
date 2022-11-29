@@ -103,11 +103,16 @@ pages:
             - public
 </pre>
 
-In case you want your website to be publicly accessible set your
-GitLab project's visibility to public. **WARNING: this will make all the
-files you committed to your `git` repo available online through the
-GitLab repo. Moreover, the `.gitlab-ci.yml` instructs GitLab CI/CD to
-render and deploy all the pages in `PAGES_DIR` to your website.** *Note:
-you can work on pages and files you don't want to make public by putting
-them in `wip/`, which is `.gitignore`d by default, just take caution not
-to `git add -f` those files.*
+**In case you want your website to be publicly accessible set your
+GitLab Pages' visibility setting to public, in your project settings.
+This way your GitLab Pages page will be publicly accessible, while your
+project can remain private.**
+
+Alternatively, you can set your project's visibility to public.
+**WARNING: this will make all the files you committed to your `git` repo
+available online through the GitLab repo. Moreover, the `.gitlab-ci.yml`
+instructs GitLab CI/CD to render and deploy all the pages in `PAGES_DIR`
+to your website.** *Note: you can still work on pages and files you
+don't want to make public by putting them in `wip/`, which is
+`.gitignore`d by default, just take caution not to `git add -f` those
+files.*
