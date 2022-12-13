@@ -13,6 +13,7 @@ it_stop: clean menu
 	@printf "Done!\n\n"
 	@printf "Adding stylesheet\n"
 	cp -f $(TEMPLATES_DIR)/styles.css $(WEB_DIR)/styles.css
+	-cp -r $(TEMPLATES_DIR)/images -t $(WEB_DIR)
 	@printf "Done!\n\n"
 	@printf "Rendering the pages/files\n\n"
 	@make --no-print-directory $(PAGES)
