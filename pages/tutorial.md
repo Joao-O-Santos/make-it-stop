@@ -39,6 +39,9 @@ Write whatever `HTML` and `CSS` code you may need in `TEMPLATES_DIR`
 - Style your webpage by writing your styles in
   `TEMPLATES_DIR/styles.css`.
 
+- Add any image files that you link to in your pages in 
+  `TEMPLATES_DIR/images/`.
+
 
 ## Run `make it_stop`
 
@@ -46,8 +49,8 @@ If you completed the above steps you should have enough to build your
 website. To build your website you simply need to run `make it_stop`
 from the directory where the `Makefile` lives.
 
-*Note: Running `make` instead of `make it_stop` works just as well but
-where's the fun in that.*
+*Note: Running `make` instead of `make it_stop` works just as well, but
+where's the fun in that?*
 
 
 ## Preview
