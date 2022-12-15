@@ -2,6 +2,9 @@
 
 # Licensing
 
+**WARNING: If you copy this file you might want to change the license of
+some files, espcially the ones in the the `pages/` directory.**
+
 | File                   | SPDX-License-Identifier |
 |------------------------|-------------------------|
 | `.gitignore`           | CC0-1.0                 |
@@ -9,6 +12,6 @@
 | `README.md`            | CC0-1.0                 |
 | `config.mk`            | CC0-1.0                 |
 | `Makefile`             | BSD-3-Clause            |
-| `pages/*.html`         | CC0-1.0                 |
+| `pages/*`              | CC0-1.0                 |
 | `templates/*.html`     | CC0-1.0                 |
 | `templates/styles.css` | BSD-3-Clause            |
