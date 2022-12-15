@@ -7,7 +7,7 @@ include config.mk
 
 all: it_stop
 
-it_stop: clean menu
+it_stop: clean configure menu
 	@printf "Making $(WEB_DIR) to store generated pages\n"
 	@mkdir $(WEB_DIR)
 	@printf "Done!\n\n"
@@ -26,7 +26,7 @@ $(PAGES): %.md:
 	cat $(TEMPLATES_DIR)/header.html > $(WEB_DIR)/$*.html
 	cat $(TEMPLATES_DIR)/menu.html >> $(WEB_DIR)/$*.html
 	cat $(TEMPLATES_DIR)/after_menu.html >> $(WEB_DIR)/$*.html
-	$(MP) $(MFLAGS) $(PAGES_DIR)/$*.md >> $(WEB_DIR)/$*.html
+	$(MR) $(MRFLAGS) $(PAGES_DIR)/$*.md >> $(WEB_DIR)/$*.html
 	cat $(TEMPLATES_DIR)/footer.html >> $(WEB_DIR)/$*.html
 	@echo "Marking the current page as selected in its menu/nav bar"
 	sed -Ei 's/li(><a href="$*.html")/li class="selected"\1/g' $(WEB_DIR)/$*.html
@@ -52,3 +52,7 @@ menu:
 	@rm $(TEMPLATES_DIR)/tmp
 	@printf "</ul>\n</nav>\n" >> $(TEMPLATES_DIR)/menu.html
 	@printf "Done!\n\n"
+
+configure:
+	@sed -i 's/<title>.*<\/title>/<title>$(WEBSITE_TITLE)<\/title>/g' $(TEMPLATES_DIR)/header.html
+	@sed -i 's/<html lang=".*">/<html lang="$(WEBSITE_LANG)" \/>/g' $(TEMPLATES_DIR)/header.html
