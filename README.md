@@ -1,3 +1,4 @@
+<!-- SPDX-License-Identifier: CC0-1.0 -->
 # make it\_stop
 
 Have you ever looked at the complexity of modern websites and thought
