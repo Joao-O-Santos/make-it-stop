@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: BSD-3-Clause
-# Copyright (c) 2022, João Oliveira Santos
+# Copyright (c) 2023, João Oliveira Santos
 
 include config.mk
 
