@@ -45,8 +45,12 @@ menu:
 	@echo "Automatically generating the menu"
 	@# Find pages marked as menu entries, and create `menu.html`.
 	@-grep "<!-- .* MENU_ENTRY=.* -->" $(PAGES_DIR)/* > $(TEMPLATES_DIR)/menu.html
-	@# Get relevant values from the entries generating N_entry+html.
+	@# Add pages marked as external menu entries to `menu.html`.
+	@-grep "<!-- .* EXTERNAL_MENU_ENTRY=.* LINK=.* -->" $(PAGES_DIR)/* >> $(TEMPLATES_DIR)/menu.html
+	@# Get values from regular entries generating N_entry+html.
 	@sed -Ei 's/$(PAGES_DIR)\/(.*).md:<!-- (.*) MENU_ENTRY=(.*) -->/\2<li><a href="\1.html">\3<\/a><\/li>/g' $(TEMPLATES_DIR)/menu.html
+	@# Get values from external entries generating N_entry+html.
+	@sed -Ei 's/$(PAGES_DIR)\/(.*).md:<!-- (.*) EXTERNAL_MENU_ENTRY=(.*) LINK=(.*) -->/\2<li><a href="\4">\3<\/a><\/li>/g' $(TEMPLATES_DIR)/menu.html
 	@# Sort the entry list.
 	@sort $(TEMPLATES_DIR)/menu.html -o $(TEMPLATES_DIR)/menu.html
 	@# Remove the N_entry from the N_entry+html.

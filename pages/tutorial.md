@@ -15,11 +15,16 @@ defaults.
 ## Write Your Pages
 
 To use `make it_stop` write your websites pages' in `PAGES_DIR`
-(which is `pages/` by default; see `config.mk`). **To include a link to
-a page in the top menu bar add a comment formatted as `<!--` `X
-MENU_ENTRY=LINK TEXT HERE` `-->` somewhere in the page, where X is the
-entry's position in the menu, if X is missing all entries are sorted by
-`LINK TEXT HERE`.**
+(which is `pages/` by default; see `config.mk`).
+
+To include a link to a page in the top menu bar add a comment formatted
+as `<!--` `X MENU_ENTRY=PAGE'S NAME IN THE MENU` `-->` somewhere in the page,
+where X is the entry's position in the menu, if X is missing all entries
+are sorted by `PAGE'S NAME IN THE MENU`.
+
+To include a link to an external page in the top menu bar add a comment
+formatted as  `<!--` `X EXTERNAL_MENU_ENTRY=PAGE'S NAME IN THE MENU
+LINK=EXTERNAL URL HERE` `-->` somewhere in the page.
 
 
 ## Write HTML/CSS
