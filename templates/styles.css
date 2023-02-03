@@ -2,6 +2,25 @@
 /* Copyright (c) 2023, João Oliveira Santos */
 /* Template stylesheet change whatever you want */
 
+/*
+ * Change the values in `:root{ }` to define your website's colors
+ * Notes:
+ *	- BG_COLOR = background color;
+ *	- TXT_COLOR = text color;
+ *	- If you're unsure what a refers to try changing it to a color
+ *	  that standsout and see what happens.
+*/
+:root {
+	--HEADERS_COLOR: blue;
+	--MENU_BG_COLOR: blue;
+	--MENU_TXT_COLOR: white;
+	--MENU_SELECTED_BG_COLOR: white;
+	--MENU_SELECTED_TXT_COLOR: black;
+	--MENU_HOVER_BG_COLOR: #bebebe;
+	--MENU_HOVER_TXT_COLOR: black;
+	--CODE_BG_COLOR: #E5E4E2;
+}
+
 body {
 	font-weight: normal;
 	font-size: 14pt;
@@ -15,8 +34,8 @@ body {
 	max-width: 80%;
 }
 
-h1, h2, h3, h4 {
-	color: blue;
+h1, h2, h3, h4, h5 {
+	color: var(--HEADERS_COLOR);
 	font-weight: bold;
 }
 
@@ -42,6 +61,10 @@ a {
 	text-decoration: none;
 }
 
+footer {
+	font-size: 12pt;
+}
+
 blockquote::before {
 	content: open-quote;
 }
@@ -54,35 +77,35 @@ code {
 	font-family: monospace;
 	font-size: 12pt;
 	font-weight: normal;
-	background-color: #E5E4E2;
+	background-color: var(--CODE_BG_COLOR);
 }
 
 .code-block {
 	font-family: monospace;
 	font-size: 12pt;
 	font-weight: normal;
-	background-color: #E5E4E2;
+	background-color: var(--CODE_BG_COLOR);
 }
 
-footer {
-	font-size: 12pt;
-}
-
+/* Streamline centering images */
 .center_img {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
 }
 
+/* Menu styling */
 .menu {
+	width: 120%;
+	margin-left: -10%;
 	position: sticky;
 	text-align: center;
 	top: 0;
-	background-color: blue;
+	background-color: var(--MENU_BG_COLOR);
 }
 
 .selected {
-	background-color: white;
+	background-color: var(--MENU_SELECTED_BG_COLOR);
 	position: center;
 }
 
@@ -95,7 +118,8 @@ footer {
 }
 
 .menu li:hover, .selected li:hover {
-	background-color: #bebebe;
+	background-color: var(--MENU_HOVER_BG_COLOR);
+	position: center;
 	/* increase padding on hover making select "pop" */
 	padding: 0pt 28pt 0pt 28pt;
 }
@@ -111,10 +135,14 @@ footer {
 	font-size: 16pt;
 }
 
+.menu a:hover, .selected a:hover {
+	color: var(--MENU_HOVER_TXT_COLOR);
+}
+
 .menu a {
-	color: white;
+	color: var(--MENU_TXT_COLOR);
 }
 
 .selected a {
-	color: black;
+	color: var(--MENU_SELECTED_TXT_COLOR);
 }
