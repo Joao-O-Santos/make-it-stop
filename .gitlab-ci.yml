@@ -5,7 +5,7 @@ pages:
     stage: deploy
     script:
         - apk update
-        - apk add make markdown
+        - apk add make discount
         - make
     artifacts:
         paths:

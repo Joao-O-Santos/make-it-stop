@@ -12,7 +12,7 @@ WEBSITE_LANG = en
 WEBSITE_TITLE = make it_stop
 
 # Markdown renderer settings
-# Define markdown parser (mp) executable name or path to executable
+# Define markdown renderer (MR) executable name or path to executable
 MR = markdown
-# Define flags (if any needed) to be passed to the markdown parser $(MP)
+# Define flags (if any needed) to be passed to the markdown renderer
 MRFLAGS =
