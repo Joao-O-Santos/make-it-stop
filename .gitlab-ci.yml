@@ -6,7 +6,7 @@ pages:
     script:
         - apk update
         - apk add make discount
-        - make
+        - make it_stop
     artifacts:
         paths:
             - public
