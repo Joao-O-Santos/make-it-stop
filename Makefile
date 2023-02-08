@@ -70,4 +70,4 @@ menu:
 configure:
 	@# Apply configuration options to the templates.
 	@sed -i 's/<title>.*<\/title>/<title>$(WEBSITE_TITLE)<\/title>/g' $(TEMPLATES_DIR)/header.html
-	@sed -i 's/<html lang=".*">/<html lang="$(WEBSITE_LANG)" \/>/g' $(TEMPLATES_DIR)/header.html
+	@sed -i 's/<html lang=".*">/<html lang="$(WEBSITE_LANG)">/g' $(TEMPLATES_DIR)/header.html
