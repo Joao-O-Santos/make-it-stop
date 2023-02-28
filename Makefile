@@ -13,6 +13,8 @@ it_stop: clean configure menu
 	@printf "Done!\n\n"
 	@printf "Adding stylesheet\n"
 	cp -f $(TEMPLATES_DIR)/styles.css $(WEB_DIR)/styles.css
+	@printf "Copying robots.txt.\n"
+	cp -f $(TEMPLATES_DIR)/robots.txt -t $(WEB_DIR)
 	@printf "Copying images dir and its contensts.\n"
 	-cp -r $(TEMPLATES_DIR)/images -t $(WEB_DIR)
 	@printf "Done!\n\n"
