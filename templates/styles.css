@@ -11,58 +11,67 @@
  *	  that standsout and see what happens.
 */
 :root {
-	--HEADERS_COLOR: blue;
+	/* Main website background color (body element color) */
+	--BODY_BG_COLOR: #FAFAFA;
+	/* Headers' color settings */
+	--HEADERS_TXT_COLOR: blue;
+	--HEADERS_BG_COLOR: #FAFAFA;
+	/* Background color of code chunks (if you use them) */
+	--CODE_BG_COLOR: #E5E4E2;
+	/*  Menu color settings */
 	--MENU_BG_COLOR: blue;
 	--MENU_TXT_COLOR: white;
 	--MENU_SELECTED_BG_COLOR: white;
 	--MENU_SELECTED_TXT_COLOR: black;
-	--MENU_HOVER_BG_COLOR: #bebebe;
+	--MENU_HOVER_BG_COLOR: #BEBEBE;
 	--MENU_HOVER_TXT_COLOR: black;
-	--CODE_BG_COLOR: #E5E4E2;
 }
 
 body {
 	font-weight: normal;
-	font-size: 14pt;
+	font-size: 18px;
 	line-height: 1.5;
 	text-align: "left";
-	margin-top: 5%;
-	margin-bottom: 5%;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 5% auto 5% auto;
 	width: 72ch;
 	max-width: 80%;
+	background-color: var(--BODY_BG_COLOR);
 }
 
 h1, h2, h3, h4, h5 {
-	color: var(--HEADERS_COLOR);
+	color: var(--HEADERS_TXT_COLOR);
 	font-weight: bold;
+	background-color: var(--HEADERS_BG_COLOR);
 }
 
 h1 {
-	line-height: 3;
-	font-size: 25pt;
+	font-size: 34px;
 	text-align: center;
+	margin: 50px 0px 50px 0px;
 }
 
 h2 {
-	font-size: 22pt;
+	font-size: 30px;
 }
 
 h3 {
-	font-size: 18pt;
+	font-size: 26px;
 }
 
 h4 {
-	font-size: 16pt;
+	font-size: 20px;
 }
 
 a {
-	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 footer {
-	font-size: 12pt;
+	font-size: 14px;
 }
 
 blockquote::before {
@@ -75,23 +84,9 @@ blockquote::after {
 
 code {
 	font-family: monospace;
-	font-size: 12pt;
+	font-size: 16px;
 	font-weight: normal;
 	background-color: var(--CODE_BG_COLOR);
-}
-
-.code-block {
-	font-family: monospace;
-	font-size: 12pt;
-	font-weight: normal;
-	background-color: var(--CODE_BG_COLOR);
-}
-
-/* Streamline centering images */
-.center_img {
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
 }
 
 /* Menu styling */
@@ -104,16 +99,11 @@ code {
 	background-color: var(--MENU_BG_COLOR);
 }
 
-.selected {
-	background-color: var(--MENU_SELECTED_BG_COLOR);
-	position: center;
-}
-
 .menu ul {
 	list-style: none;
 }
 .menu li, .selected li {
-	padding: 0pt 10pt 0pt 10pt;
+	padding: 0px 20px 0px 20px;
 	display: inline-block;
 }
 
@@ -121,18 +111,18 @@ code {
 	background-color: var(--MENU_HOVER_BG_COLOR);
 	position: center;
 	/* increase padding on hover making select "pop" */
-	padding: 0pt 28pt 0pt 28pt;
+	padding: 0px 38px 0px 38px;
 }
 
 .menu a, .selected a {
 	display: block;
 	/* make hitbox overlap with the one from `.menu li`
 	  see: https://stackoverflow.com/a/34226580 */
-	padding: 0pt 14pt 0pt 14pt;
-	margin: 0pt -14pt 0pt -14pt;
+	padding: 0px 20px 0px 20px;
+	margin: 0px -20px 0px -20px;
 	text-decoration: none;
 	font-weight: bold;
-	font-size: 16pt;
+	font-size: 20px;
 }
 
 .menu a:hover, .selected a:hover {
@@ -143,6 +133,25 @@ code {
 	color: var(--MENU_TXT_COLOR);
 }
 
+.selected {
+	background-color: var(--MENU_SELECTED_BG_COLOR);
+	position: center;
+}
+
 .selected a {
 	color: var(--MENU_SELECTED_TXT_COLOR);
+}
+
+/* Streamline centering images */
+.center_img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.code-block {
+	font-family: monospace;
+	font-size: 16px;
+	font-weight: normal;
+	background-color: var(--CODE_BG_COLOR);
 }
