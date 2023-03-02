@@ -21,7 +21,7 @@
 	/*  Menu color settings */
 	--MENU_BG_COLOR: blue;
 	--MENU_TXT_COLOR: white;
-	--MENU_SELECTED_BG_COLOR: white;
+	--MENU_SELECTED_BG_COLOR: #FAFAFA;
 	--MENU_SELECTED_TXT_COLOR: black;
 	--MENU_HOVER_BG_COLOR: #BEBEBE;
 	--MENU_HOVER_TXT_COLOR: black;
