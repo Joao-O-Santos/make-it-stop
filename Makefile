@@ -10,7 +10,7 @@ it_stop: sync-static $(TARGET)
 
 $(WEB_DIR):
 	@printf "Making $(WEB_DIR) to store generated pages\n"
-	mkdir $(WEB_DIR)
+	@mkdir -p $(WEB_DIR)
 	@printf "Done!\n\n"
 
 sync-static: | $(WEB_DIR)
@@ -18,13 +18,12 @@ sync-static: | $(WEB_DIR)
 	@cp -ru static/* $(WEB_DIR)
 	@printf "Done!\n\n"
 
-$(WEB_DIR)/%.html: $(PAGES_DIR)/%.md $(TEMPLATES_DIR)/menu.html $(TEMPLATES_DIR)/header.html | $(WEB_DIR)
+$(WEB_DIR)/%.html: $(PAGES_DIR)/%.md $(TEMPLATES_DIR)/header.html | $(WEB_DIR) $(TEMPLATES_DIR)/menu.html
 	@echo "Rendering the $< file"
 	@cat $(TEMPLATES_DIR)/header.html $(TEMPLATES_DIR)/menu.html $(TEMPLATES_DIR)/after_menu.html > $@
 	@$(MR) $(MRFLAGS) $< >> $@
 	@cat $(TEMPLATES_DIR)/footer.html >> $@
-	@sed -Ei 's/li(><a href="$(shell basename $@)")/li class="selected"\1/g' $@
-	@echo "Marking the current page as selected in its menu/nav bar"
+	@#Marking the current page as selected in its menu/nav bar
 	@sed -Ei 's/li(><a href="$*.html")/li class="selected"\1/g' $@
 	@printf "$< rendered\n\n"
 
@@ -36,12 +35,12 @@ clean:
 	@printf "Done!\n\n"
 
 # TODO: refactor with `awk` or something to be readable
-$(TEMPLATES_DIR)/menu.html: $(PAGES)
-	@echo "Automatically generating the menu"
+$(TEMPLATES_DIR)/menu.html:
 	@# Find pages marked as menu entries, and create `menu.html`.
-	@-grep "<!-- .* MENU_ENTRY=.* -->" -rh $(PAGES_DIR) > $@
+	@-grep "<!-- .* MENU_ENTRY=.* -->" $(PAGES) > $@
 	@# Add pages marked as external menu entries to `menu.html`.
-	@-grep "<!-- .* EXTERNAL_MENU_ENTRY=.* LINK=.* -->" -rh $(PAGES_DIR) >> $@
+	# HERE BE DRAGONS: this returns error when no match is found
+	@-grep "<!-- .* EXTERNAL_MENU_ENTRY=.* LINK=.* -->" $(PAGES) >> $@
 	@# Get values from regular entries generating N_entry+html.
 	@sed -Ei 's/$(PAGES_DIR)\/(.*).md:<!-- (.*) MENU_ENTRY=(.*) -->/\2<li><a href="\1.html">\3<\/a><\/li>/g' $@
 	@# Get values from external entries generating N_entry+html.
@@ -60,9 +59,19 @@ $(TEMPLATES_DIR)/menu.html: $(PAGES)
 	@rm $(TEMPLATES_DIR)/tmp
 	@# End by closing the html menu/list tags in `menu.html`.
 	@printf "</ul>\n</nav>\n" >> $@
-	@printf "Done!\n\n"
 
 configure:
 	@# Apply configuration options to the templates.
 	@sed -i 's/<title>.*<\/title>/<title>$(WEBSITE_TITLE)<\/title>/g' $(TEMPLATES_DIR)/header.html
 	@sed -i 's/<html lang=".*">/<html lang="$(WEBSITE_LANG)">/g' $(TEMPLATES_DIR)/header.html
+
+options:
+	@echo "PAGES_DIR:     $(PAGES_DIR)"
+	@echo "PAGES:         $(PAGES)"
+	@echo "WEB_DIR:       $(WEB_DIR)"
+	@echo "TEMPLATES_DIR: $(TEMPLATES_DIR)"
+	@echo "TARGET:        $(TARGET)"
+	@echo "WEBSITE_LANG:  $(WEBSITE_LANG)"
+	@echo "WEBSITE_TITLE: $(WEBSITE_TITLE)"
+	@echo "MR:            $(MR)"
+	@echo "MRFLAGS:       $(MRFLAGS)"
