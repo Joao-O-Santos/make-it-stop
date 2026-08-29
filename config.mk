@@ -12,6 +12,7 @@ TARGET = $(patsubst $(PAGES_DIR)/%.md,$(WEB_DIR)/%.html, $(PAGES))
 # Site settings
 WEBSITE_LANG = en
 WEBSITE_TITLE = make it_stop
+WEBSITE_DESCRIPTION = make it_stop: A static website generator
 
 # Markdown renderer settings
 # Define markdown renderer (MR) executable name or path to executable

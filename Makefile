@@ -64,6 +64,7 @@ configure:
 	@# Apply configuration options to the templates.
 	@sed -i 's/<title>.*<\/title>/<title>$(WEBSITE_TITLE)<\/title>/g' $(TEMPLATES_DIR)/header.html
 	@sed -i 's/<html lang=".*">/<html lang="$(WEBSITE_LANG)">/g' $(TEMPLATES_DIR)/header.html
+	@sed -i 's/<meta name="description" content=".*">/<meta name="description" content="$(WEBSITE_DESCRIPTION)">/g' $(TEMPLATES_DIR)/header.html
 
 options:
 	@echo "PAGES_DIR:     $(PAGES_DIR)"
@@ -73,5 +74,6 @@ options:
 	@echo "TARGET:        $(TARGET)"
 	@echo "WEBSITE_LANG:  $(WEBSITE_LANG)"
 	@echo "WEBSITE_TITLE: $(WEBSITE_TITLE)"
+	@echo "WEBSITE_DESCRIPTION: $(WEBSITE_DESCRIPTION)"
 	@echo "MR:            $(MR)"
 	@echo "MRFLAGS:       $(MRFLAGS)"
