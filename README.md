@@ -51,8 +51,8 @@ itself made with `make it_stop`.
 
 6. Iterate over the previous steps until you're happy with the results
 
-7. Get the pages in `WEB_DIR` to your web server or use GitLab Pages or
-   GitHub Pages.
+7. Get the pages in `WEB_DIR` to your web server or use GitLab Pages
+   and/or GitHub Pages.
 
 **For more detailed instructions checkout the
 [tutorial](https://joao-o-santos.gitlab.io/make-it-stop/tutorial.html).**
